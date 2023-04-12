@@ -1,0 +1,64 @@
+/*start cart*/
+.cart-table {
+  background-color: #dcdcdc63;
+  padding: 50px 0px;
+    box-shadow: inset 1px 1px 20px 20px gainsboro;
+  .tab-container {
+    overflow-y: scroll;
+  }
+  .table {
+    background-color: white;
+    text-align: center;
+  }
+}
+
+td{
+  img {
+    width: 100%;
+    height: 100px;
+  }
+}
+.numberandicon {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 10px;
+        @media(max-width:480px) {
+        gap: 34px 10px;
+      }
+        }
+  
+.trash-icon:hover {
+  color: red;
+  cursor: pointer;
+}
+/*empty cart*/
+.Empty-cart {
+            padding: 75px 10px;
+  p {
+    background-color: white;
+      letter-spacing: 11.6px;
+      font-weight: 700;
+      .shopping-icon {
+        background-color: black;
+          color: white;
+          font-size: 50px;
+          padding: 6px;
+          border-radius: 9%;
+          animation: flash infinite 1s linear alternate;
+          @keyframes flash {
+            from {
+              opacity: 1;
+            }
+            to {
+              opacity: 0;
+            }
+          }
+      }
+          
+  }
+}
+
+
+/*end cart*/

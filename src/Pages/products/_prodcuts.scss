@@ -1,0 +1,111 @@
+/*start prodcuts*/
+.filter-with-products {
+  background-color: #dcdcdc63;
+  padding: 50px 0px;
+  box-shadow: inset 1px 1px 20px 20px gainsboro;
+
+.aside-col {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "aside aside aside product product product product product product product";
+    @media (max-width:991px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px 15px;
+      justify-content: center;
+          overflow: hidden;
+    }
+        aside {
+            grid-area: aside;
+            @media (max-width:991px) {
+                overflow-y: scroll;
+              }
+          }
+    .card-products {
+      display: grid;
+      grid-gap: 35px 20px;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      background-color: white;
+      padding: 50px 15px 125px 15px;
+      grid-area: product;
+      @media (min-width:768px) {
+      margin-left: 20px;
+      }
+
+      .card {
+        transition: 0.9s;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0%;
+          height: 100%;
+          background-color: #00000012;
+          transition: 0.9s;
+        }
+        &:hover::before{
+          width: 100%;
+        }
+        .shoppingcart-layout {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          font-size: 45px;
+          display: none;
+          background-color: #ffffffc7;
+          border-radius: 30%;
+          padding: 9px;
+          cursor: pointer;
+          &:hover {
+            background-color: white;
+          }
+        }
+        &:hover {
+          box-shadow: 1px 1px 15px 6px gainsboro;
+          .shoppingcart-layout{
+            display: block;
+          }
+        }
+        img {
+          height: 300px;
+        }
+
+        .card-text {
+          font-weight: 100;
+          position: relative;
+          z-index: 5;
+        }
+        .category-name {
+          background: black;
+            color: white;
+            padding: 2px 8px;
+            font-weight: 600;
+        }
+      }
+    }
+  }
+  .up-button {
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    background-color: black;
+    color: white;
+    padding: 9px;
+    border: none;
+    border-radius: 10%;
+    font-weight: bold;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/*end prodcuts*/
+
+  
