@@ -1,0 +1,72 @@
+@use '../../helper/mixin' as *;
+
+/*start footer*/
+footer {
+  padding-top: 70px;
+  background-color: rgba(220, 220, 220, 0.3882352941);
+  border-top: 1px solid black;
+.footer-content {
+  @include Flex-space-between;
+  flex-wrap: wrap;
+  @media(max-width:767px) {
+    flex-direction: column;
+    gap: 60px 0px;
+    text-align: center;
+  }
+  @media(min-width:767px) and (max-width:991px) {
+    justify-content: center;
+        gap: 22px 34px;
+  }
+  .subscribe{
+    h6 {
+    font-size: 25px;
+    }
+    .mail-icon:hover {
+      color: rgba(214, 201, 175, 0.4117647059);
+      cursor: pointer;
+    }
+
+  }
+}
+.condition,
+.terms {
+  line-height: 3.6;
+}
+.condition ul li ,
+.terms ul li {
+  font-weight: 100;
+  letter-spacing: 13px;
+}
+.social-icons {
+  display: flex;
+  gap: 0px 20px;
+  cursor: pointer;
+}
+  .facebook:hover {
+    color: #1877f2;
+  }
+
+  .twitter:hover {
+    color: #1da1f2;
+  }
+
+  .linkedin:hover {
+    color: #0077b5;
+  }
+
+  .youtube:hover {
+    color: #ff0000;
+  }
+
+  .instagram:hover {
+    color: #fcaf45;
+  }
+}
+.copyright {
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 20px 20px 0px;
+  }
+
+
+/*end-footer*/

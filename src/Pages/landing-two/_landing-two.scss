@@ -1,0 +1,57 @@
+/*start landing-two*/
+/*placeholder*/
+%speech-words {
+  display: flex;
+  align-items: center;
+  line-height: 2.6;
+}
+
+.Landing-two{
+  background-color: #dcdcdc63;
+  padding: 110px 0px 85px 0px;
+  box-shadow: inset 1px 1px 20px 20px gainsboro;
+  .lan-word-two {
+    @extend %speech-words;
+    justify-content: center;
+    gap: 0px 40px;
+    padding-bottom: 80px;
+    span {
+      font-weight: 900;
+      text-decoration: underline;
+    }
+    p {
+      width: 51%;
+      font-weight: 100;
+    }
+  }
+  .lan-two-row {
+    gap: 10px 0px;
+  }
+  .cfo-speech {
+    @extend %speech-words;
+    padding: 29px 30px 0px;
+    justify-content: flex-end;
+    background-color: white;
+        gap: 0px 20px;
+    .signature {
+      font-size: 100px;
+      position: relative;
+      font-weight: 100;
+      span:last-child {
+        top: 14px;
+        position: absolute;
+        left: 10px;
+      }
+    }
+    P {
+      width: 32%;
+      font-weight: 100;
+      position: relative;
+      @media (max-width:991px) {
+        width: 70%;
+      }
+    }
+  }
+}
+
+/*End landing-two*/

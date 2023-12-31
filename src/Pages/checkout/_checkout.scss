@@ -1,0 +1,163 @@
+.checkout {
+  background-color: #dcdcdc63;
+  box-shadow: inset 1px 1px 20px 20px gainsboro;
+  padding: 70px 0;
+
+  .checkout-content {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+    .name input,
+    .lastname input,
+    .email input,
+    .email-phone input,
+    .country input,
+    .address input {
+      width: 100%;
+      padding: 7px;
+      outline-color: #0dcaf0;
+      background-color: #dcdcdc36;
+    }
+    .form {
+      padding: 17px 35px;
+      border-radius: 2%;
+      border: 1px solid gainsboro;
+      .shipping-title {
+        border-top: 1px solid #403d3d47;
+        padding: 30px 0;
+      }
+    }
+    .form {
+      flex-basis: 60%;
+      @media (max-width: 991px) {
+        flex-basis: 100%;
+      }
+    }
+    .order-summary {
+      flex-basis: 40%;
+      @media (max-width: 991px) {
+        flex-basis: 100%;
+      }
+    }
+    .type-of-shipment {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+    .type-of-shipping {
+      padding: 15px 5px;
+      text-align: center;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0px 20px;
+    padding-top: 22px;
+  }
+  .order-summary {
+    background-color: white;
+    padding: 25px;
+    line-height: 5.6;
+    box-shadow: 1px 1px 18px 20px gainsboro;
+    .order-info {
+      display: flex;
+      justify-content: space-between;
+    }
+    .total-border {
+      border-top: 1px solid gainsboro;
+      border-bottom: 1px solid gainsboro;
+    }
+  }
+  .product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gainsboro;
+    padding: 24px 0px;
+    .photo-with-quantity,
+    .title-and-price {
+      flex-basis: 50%;
+    }
+    .photo-with-quantity {
+      position: relative;
+      .quantity {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -10px;
+        transform: translateY(-50%);
+      }
+      span {
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .active {
+    background-color: black;
+    padding: 15px 11px;
+    border-radius: 14%;
+    color: white;
+  }
+}
+
+/*start-success-page*/
+.successpage {
+  box-shadow: inset 1px 1px 20px 20px gainsboro;
+  padding: 50px 25px;
+  .content-success {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px 0px;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+    .details {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+      }
+      @media (min-width: 991px) {
+        gap: 0px 13px;
+      }
+
+      .deta-one {
+        @media (min-width: 768px) {
+          border-right: 1px solid gainsboro;
+        }
+        @media (min-width: 991px) {
+          padding: 0px 15px 0px 0px;
+        }
+      }
+    }
+  }
+}
+/*overlay (loading)*/
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  box-shadow: inset 1px 1px 20px 20px gainsboro;
+}
+
+/*End-success-page*/

@@ -1,0 +1,50 @@
+/*start navbar */
+
+
+.cart{
+  position: relative;
+          @media(max-width:991px) {
+              margin-top: 50px;
+            }
+  span {
+    position: absolute;
+      top: -50%;
+      left: 0;
+      right: 0;
+    
+  }
+
+}
+
+.nav-items{
+  align-items: center;
+      gap: 16px 56px;
+  @media(max-width:991px){
+      margin-top: 20px;
+  }
+  .special{
+        background-color: black;
+          text-align: center;
+              border-radius: 7%;
+              font-weight: 900;
+  }
+}
+.navbar-nav {
+  li:hover {
+    font-weight: 900;
+    transition: 0.9s;
+  }
+}
+.dropdown-menu {
+  width: 250px;
+      line-height: 3.6;
+  .order,
+  .save-items {
+    display: flex;
+    align-items: center;
+  }
+  
+}
+
+
+/*End navbar */

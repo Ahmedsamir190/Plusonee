@@ -1,0 +1,29 @@
+@use '../../helper/mixin' as *;
+
+            /*Loading-logo*/
+
+.loading-logo {
+  @include Flex-center;
+  background-color: #d6c9af66;
+  height: 100vh;
+.loading-icon {
+  animation: load 20s 1;
+  font-size: xx-large;
+  .icon {
+    font-size: 70px;
+    color: #D6C9AF;
+  }
+}
+
+}
+@keyframes load {
+  from {
+    transform: translateX(-450px);
+
+  }
+  to {
+    transform: translateX(20px);
+
+  }
+}
+            /*End-Loading-logo*/
