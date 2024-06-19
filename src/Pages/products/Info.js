@@ -2,9 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaArrowCircleRight, FaCartArrowDown } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchproduct, addtocart } from "../../RTK/Slice/cartSlice";
-
+import { useDispatch } from "react-redux";
+import { addtocart } from "../../RTK/Slice/cartSlice";
 import { toast } from "react-toastify";
 import Spinner from "../../components/spinner/Spinner";
 import Nophoto from "../../components/images/Nophoto.png";
@@ -34,6 +33,7 @@ function Info() {
     });
   };
 
+  const imgurl = productid.images?.length > 1 ? productid.images : Nophoto;
   return (
     <div className="product-id">
       <div className="container">
@@ -50,15 +50,7 @@ function Info() {
               <Spinner />
             ) : (
               <>
-                {productid.images ? (
-                  <img
-                    src={productid.images}
-                    className="img-product-id"
-                    alt="..."
-                  />
-                ) : (
-                  <img src={Nophoto} className="img-product-id" alt="..." />
-                )}
+                <img src={imgurl} className="img-product-id" alt="..." />
 
                 <div className="card-body">
                   <h5 className="card-title">{productid.title}</h5>

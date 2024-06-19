@@ -117,6 +117,9 @@
 .successpage {
   box-shadow: inset 1px 1px 20px 20px gainsboro;
   padding: 50px 25px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
   .content-success {
     background-color: white;
     display: flex;

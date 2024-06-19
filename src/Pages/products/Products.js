@@ -6,7 +6,6 @@ import ProductComponent from "../../components/productComponent/ProductComponent
 import { FaArrowUp } from "react-icons/fa";
 import emptygray from "../../components/images/emptygray.jpg";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import { useSelector } from "react-redux";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -163,64 +162,6 @@ function Products() {
                 )}
               </>
             )}
-            {/* {currentproduct.length < 10 ? (
-                  <div className="products-update">
-                    <p>Sorry products update now</p>
-                    <ClimbingBoxLoader color="black" />
-                  </div>
-                ) : (
-                  <div className="card-products position-relative ">
-                    {currentproduct.map((product) => {
-                      return (
-                        <div key={product.id}>
-                          {placeholder ? (
-                            <div
-                              className="card"
-                              aria-hidden="true"
-                              style={{ width: "18rem" }}
-                            >
-                              <img
-                                src={emptygray}
-                                className="card-img-top img-fluid"
-                                alt="..."
-                              />
-                              <div className="card-body">
-                                <h5 className="card-title placeholder-glow">
-                                  <span className="placeholder col-6"></span>
-                                </h5>
-                                <p className="card-text placeholder-glow">
-                                  <span className="placeholder col-7"></span>
-                                  <span className="placeholder col-4"></span>
-                                  <span className="placeholder col-4"></span>
-                                  <span className="placeholder col-6"></span>
-                                  <span className="placeholder col-8"></span>
-                                </p>
-                              </div>
-                            </div>
-                          ) : (
-                            <ProductComponent product={product} />
-                          )}
-                        </div>
-                      );
-                    })}
-
-                    <Paginationn
-                      productsperpage={productsperpage}
-                      totalproduct={products.length}
-                      setCurrentpage={setCurrentpage}
-                    />
-                    {showbutton && (
-                      <button
-                        className="up-button"
-                        onClick={() => {
-                          scroll();
-                        }}
-                      >
-                        up <FaArrowUp />
-                      </button>
-                    )}
-                  </div>
-                )} */}
           </div>
         </div>
       </div>

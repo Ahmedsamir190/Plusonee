@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Clear, GetTotalPrice } from "../../RTK/Slice/cartSlice";
 import HashLoader from "react-spinners/HashLoader";
+import Nophoto from "../../components/images/Nophoto.png";
 
 function CheckOut() {
   const countriess = [
@@ -544,10 +545,12 @@ function CheckOut() {
                   </div>
                   <h3 className="py-5">Items in cart</h3>
                   {productincart.map((item, index) => {
+                    const imgurl =
+                      item.images.length > 1 ? item.images : Nophoto;
                     return (
                       <div className={"product"} key={index}>
                         <div className="photo-with-quantity">
-                          {<img src={item.images} alt={item.title} />}
+                          {<img src={imgurl} alt={item.title} />}
                           <div className="quantity">
                             <span>{item.quantity}</span>
                           </div>

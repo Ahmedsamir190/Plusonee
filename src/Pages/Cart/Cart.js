@@ -2,17 +2,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaArrowCircleRight, FaTrashAlt } from "react-icons/fa";
 import {
-  Clear,
   Decrement,
   Deleted,
   GetTotalPrice,
   Increment,
   GetTotalQuantity,
 } from "../../RTK/Slice/cartSlice";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useEffect } from "react";
 import EmptyCart from "../../components/empty-cart/EmptyCart";
-import { useState } from "react";
 import Nophoto from "../../components/images/Nophoto.png";
 
 function Cart() {
@@ -26,15 +24,6 @@ function Cart() {
     dispatch(GetTotalPrice());
     dispatch(GetTotalQuantity());
   }, [productincart, dispatch]);
-
-  // const totalprice = productincart.reduce((acc, product) => {
-  //   acc += product.price * product.quantity;
-  //   return acc;
-  // }, 0);
-
-  // const total_quantity = productincart.reduce((cartquantity, cartitem) => {
-  //   return cartquantity + cartitem.quantity;
-  // }, 0);
 
   const showToastMessage = () => {
     toast.success(`Item Removed`, {
@@ -75,24 +64,18 @@ function Cart() {
 
                 <tbody>
                   {productincart.map((products) => {
+                    const imgurl =
+                      products.images.length > 1 ? products.images : Nophoto;
                     return (
                       <tr key={products.id}>
                         {/* <td>{productc.id}</td> */}
                         <td className="w-50">{products.title}</td>
                         <td>
-                          {products.images ? (
-                            <img
-                              src={products.images}
-                              className="img-product-id"
-                              alt="..."
-                            />
-                          ) : (
-                            <img
-                              src={Nophoto}
-                              className="img-product-id"
-                              alt="..."
-                            />
-                          )}
+                          <img
+                            src={imgurl}
+                            className="img-product-id"
+                            alt="..."
+                          />
                         </td>
                         <td className="numberandicon">
                           <button
@@ -135,12 +118,6 @@ function Cart() {
 
                     <td>${price} </td>
                     <td>
-                      {/* <button
-                        className="btn btn-outline-danger"
-                        onClick={() => dispatch(Clear())}
-                      >
-                        Clear-Cart
-                      </button> */}
                       <Link
                         to={"/checkout"}
                         className="btn btn-outline-dark"

@@ -98,33 +98,6 @@ function NavBar() {
                       </Link>
                     )}
                   </li>
-                  {/* <li>
-                    {currentUser ? (
-                      <span className=" ">{currentUser.displayName}</span>
-                    ) : (
-                      <Link
-                        to={"/signin"}
-                        className=" account text-decoration-none "
-                      >
-                        {" "}
-                        <FaSignInAlt /> Sign In
-                      </Link>
-                    )}
-                  </li>
-
-                  <li>
-                    {currentUser ? (
-                      <img src={currentUser.photoURL} alt={""} />
-                    ) : (
-                      <Link
-                        to={"/signin"}
-                        className=" account text-decoration-none "
-                      >
-                        {" "}
-                        <FaSignInAlt /> Sign In
-                      </Link>
-                    )}
-                  </li> */}
                   <li>
                     {currentUser && (
                       <div className="d-flex align-items-center gap-4">

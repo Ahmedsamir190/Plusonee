@@ -1,5 +1,3 @@
-// function Pagination() {
-
 const Paginationn = ({
   productsperpage,
   totalproduct,

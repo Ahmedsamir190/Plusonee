@@ -24,17 +24,13 @@ function ProductComponent(props) {
     });
   };
 
+  const imgurl = product.images.length > 1 ? product.images : Nophoto;
+  console.log(product.images.length);
+
   return (
     <div className="card" style={{ width: "18rem" }}>
-      {product.images ? (
-        <img
-          src={product.images}
-          className="card-img-top img-fluid"
-          alt="..."
-        />
-      ) : (
-        <img src={Nophoto} className="card-img-top img-fluid" alt="..." />
-      )}
+      <img src={imgurl} className="card-img-top img-fluid" alt="..." />
+
       <div>
         <FaShoppingCart
           className="shoppingcart-layout"
