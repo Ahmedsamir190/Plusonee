@@ -33,7 +33,7 @@ function Info() {
     });
   };
 
-  const imgurl = productid.images?.length > 1 ? productid.images : Nophoto;
+  const imgurl = productid.images?.length > 1 ? productid.images[0] : Nophoto;
   return (
     <div className="product-id">
       <div className="container">
@@ -50,7 +50,11 @@ function Info() {
               <Spinner />
             ) : (
               <>
-                <img src={imgurl} className="img-product-id" alt="..." />
+                <img
+                  src={imgurl}
+                  className="img-product-id"
+                  alt="productphoto"
+                />
 
                 <div className="card-body">
                   <h5 className="card-title">{productid.title}</h5>
